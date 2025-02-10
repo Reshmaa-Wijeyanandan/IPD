@@ -8,7 +8,7 @@ model_path = "C:/Users/mrpre/OneDrive/Desktop/WEYA/EmotionDetectionModel/models/
 tokenizer = DistilBertTokenizer.from_pretrained(model_path)
 
 # Load the model correctly
-model = tf.keras.models.load_model(model_path)
+model = tf.saved_model.load(model_path)
 
 # Define emotion labels (Ensure this matches your training labels!)
 emotions = ["Sadness", "Joy", "Love", "Anger", "Fear", "Surprise"]
